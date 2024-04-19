@@ -1,10 +1,10 @@
 /* eslint-disable prettier/prettier */
 import { Module } from '@nestjs/common';
-import { AssistantService } from './assistant.service';
-import { AssistantController } from './assistant.controller';
+import { AssistantJavaService } from './assistantjava.service';
+import { AssistantJavaController } from './assistantjava.controller';
 
 @Module({
-  controllers: [AssistantController],
-  providers: [AssistantService],
+  controllers: [AssistantJavaController],
+  providers: [AssistantJavaService],
 })
-export class AssistantModule {}
+export class AssistantJavaModule {}

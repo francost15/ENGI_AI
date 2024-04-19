@@ -4,7 +4,7 @@ import OpenAI from "openai";
 interface Options {
 threadId: string;
 }
-export const getMessageListUseCasePython = async(openai:OpenAI,options:Options) => {
+export const getMessageListUseCaseC = async(openai:OpenAI,options:Options) => {
 const {threadId} = options;
 const messageList= await openai.beta.threads.messages.list(threadId);
 console.log(messageList);

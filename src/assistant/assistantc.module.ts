@@ -1,10 +1,10 @@
 /* eslint-disable prettier/prettier */
 import { Module } from '@nestjs/common';
-import { AssistantService } from './assistant.service';
-import { AssistantController } from './assistant.controller';
+import { AssistantCController } from './assistantc.controller';
+import { AssistantCService } from './assistantc.service';
 
 @Module({
-  controllers: [AssistantController],
-  providers: [AssistantService],
+  controllers: [AssistantCController],
+  providers: [AssistantCService],
 })
-export class AssistantModule {}
+export class AssistantCModule {}

@@ -1,12 +1,12 @@
 /* eslint-disable prettier/prettier */
 import { Body, Controller, Post } from '@nestjs/common';
-import { AssistantService } from './assistant.service';
 import { QuestionDto } from './dtos/question.dto';
+import { AssistantPythonService } from './assistantpython.service';
 
 @Controller('python')
-export class AssistantController {
+export class AssistantPythonController {
   
-  constructor(private readonly assistantService: AssistantService) {}
+  constructor(private readonly assistantService: AssistantPythonService) {}
   
   @Post('create-thread')
   async createThread(){

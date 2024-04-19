@@ -1,11 +1,13 @@
 /* eslint-disable prettier/prettier */
 import { Injectable } from '@nestjs/common';
 import OpenAI from 'openai';
-import { checkCompleteStatusUseCase, createMessageUseCase,createRunUseCasePython, createThreadUseCase, getMessageListUseCase } from './use-cases';
+import {checkCompleteStatusUseCasePython, createMessageUseCase,createRunUseCasePython, createThreadUseCase, 
+    getMessageListUseCasePython } from './use-cases';
 import { QuestionDto } from './dtos/question.dto';
 
+
 @Injectable()
-export class AssistantService {
+export class AssistantPythonService {
 
     private openai = new OpenAI({
         apiKey: process.env.OPENAI_API_KEY,
@@ -20,8 +22,8 @@ export class AssistantService {
         console.log({message});
         
         const run = await createRunUseCasePython(this.openai, {threadId});
-        await checkCompleteStatusUseCase(this.openai, {runId:run.id,threadId:threadId});
-        const messages = await getMessageListUseCase(this.openai, {threadId});
+        await checkCompleteStatusUseCasePython(this.openai, {runId:run.id,threadId:threadId});
+        const messages = await getMessageListUseCasePython(this.openai, {threadId});
         return messages;
     }
 
