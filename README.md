@@ -1,5 +1,5 @@
-# Instalación Dev
-Clonar el repositorio
-Instalar dependencias npm install -f
-Crar archivo .env basado en el .env.template
-Ejecutar npm run start:dev
+# ENGI AI
+
+Es una aplicación de bots personalizados de lenguajes de programacion
+con la api de open ai, estan perfectamente construidos para cada lenguaje
+Backend hecho por nest y front end con react 
